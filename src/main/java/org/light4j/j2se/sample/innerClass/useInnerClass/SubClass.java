@@ -7,10 +7,19 @@ package org.light4j.j2se.sample.innerClass.useInnerClass;
  *
  */
 public class SubClass extends Out.In {
-
+	
 	// 显示定义SubClass的构造器
 	public SubClass(Out out) {
 		// 通过传入的Out对象显示调用In的构造器
 		out.super("hello");
+	}
+	
+	public void test(){
+		System.out.println("Hello World");
+	}
+	
+	public static void main(String[] args) {
+		SubClass sc = new SubClass(new Out());
+		sc.test();
 	}
 }
